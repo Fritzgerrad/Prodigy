@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+    border-style:solid;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: rgb(18, 67, 107);
+    padding:30px;    
+}
+.fundindlabel input{
+    position:absolute;
+    opacity: 0;
+    cursor:pointer;
+
+}
+.fundinglabel .fundingcustom{
+    position:absolute;
+    top:0px;
+    left:0px;
+    height: 24px;
+    width:24px;
+    background-color: transparent;
+    border-radius: 10px;
+    border:2px;solid:green;
+}
+.fundinglabel .fundingcustom::after{
+    position:absolute;
+    content:"";
+    top:0px;
+    left:12px;
+    height: 0px;
+    width:0px;
+    background-color: transparent;
+    border-radius: 10px;
+    border:2px;solid:green;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform:rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity:1;
+
+}
+.fundinglabel input:checked .fundingcustom{
+background-color: white;
+border-radius: 10px;
+border:2px;solid:green;
+-webkit-transform: rotate(0deg) scale(1);
+-ms-transform:rotate(0deg) scale(1);
+transform: rotate(0deg) scale(1);
+opacity:1;
+}
+
+.fundinglabel input:checked .fundingcustom::after{
+    background-color: white;
+    border-radius: 10px;
+    border:2px;solid:green;
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform:rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity:1;
+    top:3px;
+    left:8px;
+    height: 12px;
+    width:6px;
+    border-width:0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0px;
+    border:2px;solid:green;
+    }
+</style>
+</head>
+<body>
+<p>
+<label class = "fundindlabel">
+<input type="checkbox">
+<span class = "fundingcustom"></span>
+</label>
+
+FUNDING
+</p>
+</body>
+
+</html>
